@@ -1,0 +1,6 @@
+pikachu
+squirtle
+charmander
+bulbasaur
+eevee
+greninja
