@@ -26,7 +26,6 @@ namespace Q3{
     }
 
     class Program{
-        static bool 
 
         static void Main(string[] args){
             string[] input = Console.ReadLine().Split(' ');
