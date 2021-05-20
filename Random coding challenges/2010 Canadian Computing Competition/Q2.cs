@@ -36,24 +36,30 @@ namespace Q2{
         }
 
         public node findNode(char[] c){
+
             if (c.Length == 1){
                 if (c[0] == '0'){
-                    if (hasLeft == false) {Left = new node();}
-                    return Left;
+                    //if (hasLeft == false) {Left = new node();}
+                    //return Left;
+                    Console.WriteLine(1);
                 }
                 else{
-                    if (hasRight == false) {Right = new node();}
-                    return Right;
+                    //if (hasRight == false) {Right = new node();}
+                    //return Right;
+                    Console.WriteLine(2);
                 }
             }
             if (c[0] == '0'){
-                if (hasLeft == false) {Left = new node();}
-                return Left.findNode(c.Skip(0).ToArray());
+                //if (hasLeft == false) {Left = new node();}
+                //return Left.findNode(c.Skip(0).ToArray());
+                Console.WriteLine(3);
             }
             else{
-                if (hasRight == false) {Right = new node();}
-                return Right.findNode(c.Skip(0).ToArray());
+                //if (hasRight == false) {Right = new node();}
+                //return Right.findNode(c.Skip(0).ToArray());
+                Console.WriteLine(4)
             }
+            System.Environment.Exit(69);
         }
     }
 
@@ -68,6 +74,7 @@ namespace Q2{
             for (int i = 0; i < k; i++){
                 input = Console.ReadLine().Split(' ');
                 c = input[0].ToCharArray()[0];
+                Console.WriteLine(c);
                 sequence = input[1].ToCharArray();
                 head.findNode(sequence).setLetter(c);
             }
