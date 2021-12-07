@@ -24,10 +24,10 @@ class Node:
 def helper(node: Node, min, max):
     if node is None:
         return True 
-    elif (min is not None and node.getNum < min) or (max is not None and node.getNum() > max):
+    elif (min is not None and node.getNum() < min) or (max is not None and node.getNum() > max):
         return False
     else:
-        return helper(node.getLeft(), min, node.getNum) and helper(node.getRight(), node.getNum(), max)
+        return helper(node.getLeft(), min, node.getNum()) and helper(node.getRight(), node.getNum(), max)
 
 def validate(node):
     return helper(node)
