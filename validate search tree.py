@@ -30,4 +30,4 @@ def helper(node: Node, min, max):
         return helper(node.getLeft(), min, node.getNum()) and helper(node.getRight(), node.getNum(), max)
 
 def validate(node):
-    return helper(node)
+    return helper(node, None, None)
